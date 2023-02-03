@@ -2,11 +2,13 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const usuario = require('./controllers/usuario-controller');
+app.use(express.json());
+
+const { usuarioGet, usuarioPost } = require('./controllers/usuario-controller');
 usuarioGet(app);
 usuarioPost(app);
 
-const tarefa = require('./controllers/tarefa-controller');
+const { tarefaGet, tarefaPost } = require('./controllers/tarefa-controller');
 tarefaGet(app);
 tarefaPost(app);
 

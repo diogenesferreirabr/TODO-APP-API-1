@@ -6,8 +6,17 @@ app.get('/usuario', (req, res) => {
 
 function usuarioPost (app) {
 app.post('/usuario', (req, res) => {
+
+// 
+
+  console.log(req.body);
+  
+  
   res.send("Rota POST de usuario ativada: usuário adicionado ao banco de dados")
 })
+
 };
+
+
 
 module.exports = { usuarioGet, usuarioPost }
