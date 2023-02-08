@@ -42,13 +42,15 @@ class UsuarioController {
     // ROTA DELETE
     static deletar(req, res) {
         
-    
+
     const usuario = bdUsuarios.find(usuario => usuario.email === req.params.email);
+
 
         if(!usuario){
             res.send("Usuario não encontrado")
         }
-        
+
+
         const index = bdUsuarios.indexOf(usuario);
         bdUsuarios.splice(index,1);
         res.send({
